@@ -11,6 +11,11 @@ Pandas is used to create a dataframe.
   pip3 install pandas  --> used to install pandas package in python.
 Streamlit is used to create a web application.
   pip3 install streamlit  --> used to install streamli package in python.
+
+
+sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter. Text is the user input 
+To get User input
+    text=st.text_input('Enter the Search_keyword') 
   
   
 
