@@ -12,10 +12,12 @@ Pandas is used to create a dataframe.
 Streamlit is used to create a web application.
   pip3 install streamlit  --> used to install streamli package in python.
 
-
+# To get user inputs
 sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter. Text is the user input.
 To get User input
     text=st.text_input('Enter the Search_keyword') 
+    until_date=st.text_input('Until: YYYY-MM-DD')    
+    since_date=st.text_input('Since: YYYY-MM-DD')
   
   
 
