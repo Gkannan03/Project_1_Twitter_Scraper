@@ -90,7 +90,7 @@ if (st.button('Submit', on_click=callback) or st.session_state.button_clicked):
         now = datetime.now()                  # current time
         timestamp1 = datetime.timestamp(now)  # converting the datetime object into a timestamp
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-        mydb = myclient["Twitter_database_done"]  # Creating a database named 'Twitter_database'
+        mydb = myclient["Twitter_database"]  # Creating a database named 'Twitter_database'
         mycol = mydb["Twitter_datas"]  # Creating a collection named 'Twitter_datas'
         key = text + str(timestamp1)  # concatenating search_keyword with timestamp to make it as a keyword for the database document
         # eg:({“text+current Timestamp”: [{1000 Scraped data from past 100 days }]})
