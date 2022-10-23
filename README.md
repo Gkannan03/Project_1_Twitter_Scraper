@@ -2,7 +2,7 @@
 Scrapping Data from Twitter based on user input.
 
 # Requirements
-I used snscrape, pymongo, pandas, streamlit, datetime modules for this project.
+1. I used snscrape, pymongo, pandas, streamlit, datetime modules for this project.
 snscrape: snscrape is used to scrape the data from the social media. From Twitter it scrapes things like user, id, content, likescount, retweetCount, hashtags,etc.
   pip3 install snscrape --> used to install snscrape package in python.
 pymongo is used to connect python with mongodb database.
@@ -13,7 +13,7 @@ Streamlit is used to create a web application.
   pip3 install streamlit  --> used to install streamli package in python.
 
 
-sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter. Text is the user input 
+sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter. Text is the user input.
 To get User input
     text=st.text_input('Enter the Search_keyword') 
   
