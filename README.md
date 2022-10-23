@@ -15,8 +15,8 @@ Streamlit is used to create a web application.
 # To get user inputs
 sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter.
 To get User input
-    text=st.text_input('Enter the Search_keyword') 
-    until_date=st.text_input('Until: YYYY-MM-DD')    
+    1. text=st.text_input('Enter the Search_keyword') 
+    2. until_date=st.text_input('Until: YYYY-MM-DD')    
     since_date=st.text_input('Since: YYYY-MM-DD')
     scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+until_date+' '+'since:'+since_date).get_items()
     
