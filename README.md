@@ -18,6 +18,7 @@ To get User input
     text=st.text_input('Enter the Search_keyword') 
     until_date=st.text_input('Until: YYYY-MM-DD')    
     since_date=st.text_input('Since: YYYY-MM-DD')
+    scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+until_date+' '+'since:'+since_date).get_items()
     
     
   
