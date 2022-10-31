@@ -25,10 +25,10 @@ text=st.text_input('Enter the Search_keyword')                    #User input to
 col1,col2,col3=st.columns(3)
 
 with col1:
-    until_date=st.text_input('Until: YYYY-MM-DD')        # Getting date inputs 
+    until_date=st.date_input('Until: YYYY-MM-DD')        # Getting date inputs 
     Until_date=str(until_date)
 with col2:
-    since_date=st.text_input('Since: YYYY-MM-DD')
+    since_date=st.date_input('Since: YYYY-MM-DD')
     Since_date=str(since_date)
 with col3:
     limit_range=st.text_input('Limit_range: number')
