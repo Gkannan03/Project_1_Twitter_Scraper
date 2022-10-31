@@ -17,10 +17,12 @@ sntwitter.TwitterSearchScraper(Text) used to scrape the data from twitter.
 To get User input
 
       text=st.text_input('Enter the Search_keyword') 
-      until_date=st.text_input('Until: YYYY-MM-DD') 
-      since_date=st.text_input('Since: YYYY-MM-DD')
+      until_date=st.date_input('Until: YYYY-MM-DD')
+      Until_date=str(until_date)
+      since_date=st.date_input('Since: YYYY-MM-DD')
+      Since_date=str(since_date)
       limit_range=st.text_input('Limit_range: number')
-      scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+until_date+' '+'since:'+since_date).get_items()
+      scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+Until_date+' '+'since:'+Since_date).get_items()
      
      for i in scrapped_data:
     # appending 'date','id','url','content','user','replyCount','retweetCount','lang','source','likeCount' attributes scrapped from twitter
