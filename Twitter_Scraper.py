@@ -25,9 +25,11 @@ text=st.text_input('Enter the Search_keyword')                    #User input to
 col1,col2,col3=st.columns(3)
 
 with col1:
-    until_date=st.text_input('Until: YYYY-MM-DD')        # Getting date inputs in form of text
+    until_date=st.text_input('Until: YYYY-MM-DD')        # Getting date inputs 
+    Until_date=str(until_date)
 with col2:
     since_date=st.text_input('Since: YYYY-MM-DD')
+    Since_date=str(since_date)
 with col3:
     limit_range=st.text_input('Limit_range: number')
 
@@ -48,8 +50,8 @@ if (st.button('Submit', on_click=callback) or st.session_state.button_clicked):
         if len(until_date) == 0 or len(since_date) == 0 or len(limit_range) == 0:
             st.error('Please Enter range', icon="🚨")
         else:
-            st.write('Entered Search_keyword is :'+' '+ '\"'+ text + '\"'+ ' ' + 'Until:' + '\"'+ until_date + ' ' + '\"'+ 'Since:' + '\"'+ since_date +'\"')
-            scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+until_date+' '+'since:'+since_date).get_items()
+            st.write('Entered Search_keyword is :'+' '+ '\"'+ text + '\"'+ ' ' + 'Until:' + '\"'+ Until_date + ' ' + '\"'+ 'Since:' + '\"'+ Since_date +'\"')
+            scrapped_data = sntwitter.TwitterSearchScraper(text+' '+'until:'+Until_date+' '+'since:'+Since_date).get_items()
 
             for i in scrapped_data:
                 # appending 'date','id','url','content','user','replyCount','retweetCount','lang','source','likeCount' attributes scrapped from twitter
