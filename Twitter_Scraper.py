@@ -47,7 +47,7 @@ if (st.button('Submit', on_click=callback) or st.session_state.button_clicked):
         st.error('Please Enter search_keyword', icon="🚨")
 
     else:
-        if len(until_date) == 0 or len(since_date) == 0 or len(limit_range) == 0:
+        if len(limit_range) == 0:
             st.error('Please Enter range', icon="🚨")
         else:
             st.write('Entered Search_keyword is :'+' '+ '\"'+ text + '\"'+ ' ' + 'Until:' + '\"'+ Until_date + ' ' + '\"'+ 'Since:' + '\"'+ Since_date +'\"')
